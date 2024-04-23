@@ -2,18 +2,24 @@ import './App.css';
 import React from 'react';
 import { useState } from 'react';
 
-
+//updated version
 
 
 const Navbar =() =>{
   return(
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    /*<nav className="navbar navbar-expand-lg navbar-light bg-light">
     <div className="container-fluid">
-      <a className="navbar-brand" href="#"> <h2> The Brewery, by Swapnaneel Bishnu </h2></a>
+      <a className="navbar-brand" href="#"> <h2> <b> The Brewery, by Swapnaneel Bishnu </b> </h2></a>
       
       
     </div>
-  </nav>
+  </nav>*/
+  <ul className="nav justify-content-center">
+  <li className="nav-item">
+    <a className="nav-link active" aria-current="page" href="#"> The Brewery, by Swapnaneel Bishnu <i class="fa-solid fa-wine-bottle"></i> <i class="fa-solid fa-wine-glass-empty"></i>
+  </a>
+  </li>
+</ul>
   )
 }
 
@@ -45,8 +51,8 @@ const SearchBar = ()=>{
   
   return(
       <>
-      <header className="bg-dark text-white p-5">
-      <input  placeholder='(try margarita/vodka/beer)' className='search'  value={input} onChange={(e)=>{HandleChange(e.target.value)}}/>
+      <header className="button-container p-5">
+      <input  placeholder='(try margarita/vodka/whiskey)' className='search'  value={input} onChange={(e)=>{HandleChange(e.target.value)}}/>
       <button className='search' onClick={()=>{ fetchData(input)}}>
         Search
       </button>
@@ -58,13 +64,13 @@ const SearchBar = ()=>{
 
       <div className='para'>
        <p className="col-lg-8 offset-lg-2 my-5  " > 
-       <h1> <u>Name:</u> {name}</h1>
-       <h3 className='recipe'>  <u> Recipe:</u> {recipe} </h3>
+       <h1 className='title'> <b>Name: </b> {name}</h1>
+       <h3 className='recipe'> <b>  Recipe:</b> {recipe} </h3>
        
           
           
           </p>  
-          <hr />
+          
     </div>
    
       </>
@@ -108,7 +114,7 @@ render(){
   return(
     <>
     
-    <header className="bg-dark text-white p-5">
+    <header className="button-container p-5">
       
       <button type='button' className='search' onClick={()=>{
         this.generateCharacter();
@@ -130,13 +136,14 @@ render(){
 
     <div className='para'>
        <p className="col-lg-8 offset-lg-2 my-5  " > 
-       <h1> <u>Name:</u> {this.state.Name}</h1>
-       <h3 className='recipe'>  <u> Recipe:</u> {this.state.Recipe} </h3>
+       <h1 className='title'> <b> Name: </b> {this.state.Name}</h1>
+       <h3 className='recipe'> <b>  Recipe: </b>{this.state.Recipe} </h3>
        
           
+
           
           </p>  
-          <hr />
+          
     </div>
     
     </>

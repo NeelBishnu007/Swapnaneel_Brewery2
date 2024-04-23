@@ -57,7 +57,10 @@
   margin-left: 10px;
   padding: 12px;
   border-radius: 10px;
+  border: none;
+ 
 }
+
 
 
 .recipe{
@@ -68,10 +71,48 @@
   
   padding: 30px;
   height: 100%;
+  background-color: #900D09;
+  color: yellow;
 }
 
 @media(max-width: 580px){
   .search{
     font-size: 15px;
+    margin-top: 5px;
   }
+ 
+}
+
+
+.nav{
+  background-color: #4e0707;
+}
+.nav-link{
+  font-family: "Great Vibes", cursive;
+  font-size:55px;
+  color: #57BCBE;
+  
+}
+
+.nav-link:hover{
+  color: #60AB91;
+}
+
+
+.recipe{
+  font-family: "Great Vibes", cursive;
+  font-size: 45px;
+  
+}
+
+
+.title{
+  font-family: "Great Vibes", cursive;
+  font-size: 50px;
+  
+}
+
+.button-container{
+  background-color: #CFB284;
+  box-shadow: 0 12px 30px grey;
 }
